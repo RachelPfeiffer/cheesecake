@@ -102,7 +102,8 @@ body {
 
 .carousel {
   position: relative;
-  height: 320px; }
+  height: 320px;
+  overflow: hidden; }
   .carousel .arrows {
     position: absolute;
     top: 50%;
@@ -179,7 +180,8 @@ footer {
       font-size: 0.9em;
       padding-top: 2em;
       width: 90vw;
-      border-bottom: 2px solid #c692cd; }
+      border-bottom: 2px solid #c692cd;
+      padding-inline-start: 0; }
     footer .footer-nav li {
       margin: 1em; }
   footer .contact {
@@ -196,8 +198,11 @@ footer {
     margin-top: 1em; }
   footer .social-media .social-media-icons ul {
     list-style: none;
-    margin: 1em auto;
-    width: 20%; }
+    margin: auto;
+    width: fit-content;
+    display: flex; }
+    footer .social-media .social-media-icons ul li {
+      margin: 10px; }
   footer .grey-footer {
     color: white;
     background-color: #555859;
@@ -206,3 +211,14 @@ footer {
     margin: auto;
     text-align: center;
     padding: 2em 0; }
+
+@media only screen and (min-width: 550px) {
+  .featured ul {
+    display: flex;
+    flex-wrap: wrap; }
+    .featured ul li {
+      width: 25%; } }
+
+@media only screen and (min-width: 550px) {
+  .hamburger {
+    display: none; } }

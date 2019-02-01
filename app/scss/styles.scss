@@ -149,6 +149,7 @@ body {
 .carousel {
   position: relative;
   height: 320px;
+  overflow: hidden;
 
 
 
@@ -263,6 +264,8 @@ footer {
       padding-top: 2em;
       width: 90vw;
       border-bottom: 2px solid #c692cd;
+      padding-inline-start: 0;
+
     }
 
     li {
@@ -289,10 +292,16 @@ footer {
   .social-media {
     .social-media-icons ul {
       list-style: none;
-      margin: 1em auto;
-      width: 20%;
+      margin: auto;
+      width: fit-content;
+      display: flex;
 
+      li {
+        margin: 10px;
+      }
     }
+
+
   }
 
   .grey-footer {
@@ -304,4 +313,21 @@ footer {
     text-align: center;
     padding: 2em 0;
   }
+}
+
+@media only screen and (min-width: 550px) {
+  .featured ul{
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      width: 25%;
+    }
+  }
+
+}
+
+
+@media only screen and (min-width: 550px) {
+
 }
